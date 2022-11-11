@@ -20,4 +20,8 @@ class TestEntity(text : String, context: String, etc: String) : CommonTest() {
         fun updateTest(text: String) {
                 this.text = text
         }
+
+        fun updateEtc(etc: String) {
+                this.etc = etc
+        }
 }
