@@ -12,11 +12,11 @@ class TestRepositoryTestEntity (val testRepository: TestRepository){
 
     @Test
     fun test() {
-        val testEntity = TestEntity(text = "asd")
+        val testEntity = TestEntity(text = "asd", context = "asd", etc = "asd")
         testRepository.save(testEntity)
         assertEquals(1L, testEntity.id)
 
-        testRepository.save(TestEntity(text = "asdasd"))
+        testRepository.save(TestEntity(text = "asdasd", context = "asd", etc = "asd"))
 
         val findAll = testRepository.findAll()
 

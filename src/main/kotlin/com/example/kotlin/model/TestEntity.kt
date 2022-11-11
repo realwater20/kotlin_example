@@ -9,12 +9,13 @@ import javax.persistence.Id
 
 @Getter
 @Entity
-class TestEntity(text : String, context: String) : CommonTest() {
+class TestEntity(text : String, context: String, etc: String) : CommonTest() {
         @Id
         @GeneratedValue
         var id : Long? = null
         var text : String = text
         var context: String = context
+        var etc: String = etc
 
         fun updateTest(text: String) {
                 this.text = text
